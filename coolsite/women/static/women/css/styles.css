@@ -12,7 +12,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color: #CC0000;
+	color: #19d45d;
 	text-decoration: underline;
 }
 
@@ -46,7 +46,7 @@ div.article-panel {
     padding: 5px 10px 5px 10px;
     box-sizing: border-box;
     overflow: hidden;
-    color: #555;
+    color: rgb(130, 14, 169);
 }
 div.article-panel p.first {
     margin: 0;
@@ -76,7 +76,7 @@ ul.list-articles li {
 .clear {clear: both;}
 
 .header {
-	background: #3F4137;
+	background: #4a306a;
 	height: 60px;
 }
 
@@ -103,7 +103,7 @@ ul.mainmenu li.logo {margin: 0;}
 ul.mainmenu li.last {float: right;}
 
 ul.mainmenu li a {
-	color: #fdc073;
+	color: #0dc39c;
 	text-decoration: none;
 }
 ul.mainmenu li a:hover {
