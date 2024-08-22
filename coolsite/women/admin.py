@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import *
 
+# Настройка админки
 class WomenAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'time_create', 'photo', 'is_published')
     list_display_links = ('id', 'title')
@@ -16,5 +17,6 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     prepopulated_fields = {"slug": ("name", )}   
 
+# Pарегистрируем модель Women, WomenAdmin
 admin.site.register(Women, WomenAdmin)
 admin.site.register(Category, CategoryAdmin)

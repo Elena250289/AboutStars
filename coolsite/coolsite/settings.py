@@ -30,7 +30,7 @@ ALLOWED_HOSTS =['127.0.0.1']
 
 
 # Application definition
-
+# Регистрируем наше приложение
 INSTALLED_APPS = [
     'women.apps.WomenConfig',
     'django.contrib.admin',
@@ -119,8 +119,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+# Префикс URL-адреса для статических файлов
 STATIC_URL = '/static/'
+# Определяем путь к папке static всего проекта
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# список дополнительных (нестандартных) путей к статическим файлам
 STATICFILES_DIRS = []
 
 # Default primary key field type
@@ -128,6 +131,8 @@ STATICFILES_DIRS = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Константы для автоматического выполнения операции
+# по загрузки графических файлов и формирования путь к нему
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL ='/media/'
 # LOGIN_REDIRECT_URL = '/'

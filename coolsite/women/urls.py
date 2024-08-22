@@ -2,6 +2,7 @@ from django.urls import path, re_path
 
 from .views import *
 
+# Формируем маршруты к страницам
 urlpatterns = [
     path('', WomenHome.as_view(), name = 'home'),
     path('about/', about, name = 'about'),

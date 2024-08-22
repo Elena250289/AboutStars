@@ -20,12 +20,17 @@ from django.conf.urls.static import static
 from women.views import *
 from coolsite import settings
 
+# Прописываем пути (передаем весь список URL-адресов приложения и связанные с ними функции)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('women.urls')),
 ]
 
+# Симуляция работы реального сервера для получения
+# ранее загруженных файлов и передачи их нашему приложению
+# (на реальных серверах этот процесс, как правило, уже настроен) 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# Ссылка на функцию, которая и будет формировать ответ для отсутствующих страниц
 handler404 = pageNotFound

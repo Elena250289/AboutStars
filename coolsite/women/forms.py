@@ -1,3 +1,4 @@
+# Cоздание форм
 from django import forms
 from django.core.exceptions import ValidationError
 from .models import *
@@ -5,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
+# Форма для добавления статьи
 class AddPostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,6 +26,7 @@ class AddPostForm(forms.ModelForm):
  
         return title
 
+# Форма для регистрации пользователя
 class RegisterUserForm(UserCreationForm):
     username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'form-input'}))
     email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'class': 'form-input'}))
